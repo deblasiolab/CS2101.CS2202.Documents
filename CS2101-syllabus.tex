@@ -1,0 +1,286 @@
+%% adapted from Chris Bourke's syllabus template for CS 1
+%% https://github.com/cbourke/ComputerScienceI
+%% Accessed on 29 July 2020
+%% Used and distributed under the CC BY-SA 4.0 License
+
+\documentclass[12pt]{scrartcl}
+%\usepackage{tagpdf}
+
+\usepackage{epsfig,amssymb}
+
+%\usepackage{draftwatermark}
+%\SetWatermarkScale{7}
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{multirow}
+\usepackage{colortbl} 
+\usepackage{xspace}
+\usepackage[normalem]{ulem}
+\usepackage{multicol}
+\usepackage{todonotes}
+
+\usepackage{tcolorbox}
+
+\definecolor{steelblue}{RGB}{70, 130, 180}
+\definecolor{darkred}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\usepackage[pdflang={en-US}]{hyperref}
+\hypersetup{
+  letterpaper,
+  colorlinks,
+  linkcolor=darkgreen,
+  citecolor=darkgreen,
+  menucolor=darkred,
+  urlcolor=blue,
+  pdfpagemode=none,
+  pdftitle={Syllabus},
+  pdfauthor={Dan DeBlasio},
+  pdfkeywords={}
+}
+\setcounter{tocdepth}{2}
+
+\usepackage{fullpage}
+\pagestyle{empty} %
+\usepackage{subfigure}
+\usepackage{enumitem}
+\setenumerate{nolistsep}
+\setitemize{nolistsep}
+\renewcommand{\labelenumii}{\alph{enumii}.}
+
+
+\setlength{\parindent}{0pt} %
+\setlength{\parskip}{.25cm}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\renewcommand*{\titlepagestyle}{fancy}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\lhead{~}
+\chead{~}
+\rhead{~}
+\lfoot{\Title ---Syllabus}
+\cfoot{~}
+\rfoot{\thepage\ / \pageref*{LastPage}}
+
+\makeatletter
+\title{Discrete Structures 1}\let\Title\@title
+\subtitle{
+{\small
+Dr. Dan DeBlasio\\
+Department of Computer Science\\
+University of Texas at El Paso\\
+}
+\vskip-1cm}
+\date{\small CS 2101 -- Spring 2023\\ \vspace{1em}Revised: \today\\(change since start of classes marked \change{}{in orange})}
+\makeatother
+
+\newcommand{\change}[2]{\textcolor{orange}{#2}}
+%\newcommand{\change}[2]{#2}
+
+
+%\tagpdfifpdftexT
+% {
+%  \pdfcatalog{/Lang (en-US)}
+%  \usepackage[T1]{fontenc}
+% }
+% 
+%\tagpdfsetup{activate-all,tabsorder=structure}
+
+\begin{document}
+%\tagstructbegin{tag=Document}
+
+\maketitle
+%
+%\begin{center}
+%{\Huge\color{red}DRAFT}
+%\end{center}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{General Information}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\tagmcbegin{tag=P}
+\paragraph{Course Objectives:} Upon successful completion of the course, you will have a solid understanding of the following topics: propositional logic, proofs, sets, functions, and relations, counting, induction and recursion. Most importantly, you will know of and be able to articulate how these topics are essential in Computer Science.
+%\tagmcend
+
+\paragraph{Prerequisite:} Students must have passed one of the following with a C or better:
+\begin{multicols}{4}
+\begin{itemize}
+\item MATH 1310
+\item MATH 1312
+\item MATH 1411
+\item MATH 1508
+\item MATH 2301
+\item MATH 2313
+\item MATH 2326
+\end{itemize}
+\end{multicols}
+or have taken equivalent tests as described in the \href{http://catalog.utep.edu/search/?search=CS+2101}{UTEP course catalog}. 
+
+\paragraph{Knowledge and Abilities Required Before Entering the Course:} Students are assumed to be comfortable with basic algebra, and have some exposure to programatic thinking and problem solving. 
+
+\paragraph{Topics covered this semester:}
+\begin{itemize} 
+\item connections between mathematics concepts and computer science
+\item proof, logic, and induction mechanisms and how they can be implemented and applied
+\item logic and reasoning as it applies to computer science problem solving
+\end{itemize}
+
+\clearpage
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Logistics}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph{Synchronous course session times and locations:}
+\begin{itemize}
+\item CRN 24876: TR 8:00am-8:50a --- LART 106
+\item CRN 25983: TR 12:00pm-12:50p  --- GEOL 123
+\end{itemize}
+{\color{red} Because of space constraints, you cannot come to another section's lecture!}
+
+\paragraph{Textbook:} \textit{Connecting Discrete Mathematics and Computer Science, 2nd edition} by David Liben-Nowell from Cambridge University Press. 
+Available at the bookstore and other booksellers (ISBN: 978-1-00-915049-1). 
+A preprint (with some corrections missing) of the textbook is available online at \url{https://cs.carleton.edu/faculty/dln/book/} if you have ordered the book but are waiting for it to arrive.
+
+This course, in combination with Discrete Structures 2, will cover the majority of this entire text. Within Discrete Structures 1 we will cover the contents of Chapters 2--5 and some of chapter 6. 
+
+\paragraph{Communication platforms:}
+\begin{itemize}
+\item \textbf{Blackboard}  -- Used for announcements and grade tracking. All official grades and feedback will be sent through Blackboard. Students should monitor this site for important class information. 
+\item \textbf{MS Teams} -- Used for office hours and intra-class discussions. Several channels will be available in the team for asking and answering questions, the instructional staff will answer questions posted on teams, but other students are encouraged to provide feedback as well. 
+\end{itemize}
+
+\input{instructional_staff}
+
+\input{expectations}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Grading}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Grades are communicated to students in a timely manner. 
+It is the students’ responsibility to keep track of their grades by compiling the grades they receive. 
+Your semester grade will be based on a combination of homework assignments, weekly quizzes, class participation,  mid-term assessment, and a final exam. 
+
+The approximate percentages are as follows:
+\begin{center}
+\begin{tabular}{rl}
+\textbf{20\% } & Class participation \\
+\textbf{35\% } & Homework/Quizzes/In-class assignments grade\\
+\textbf{25\% } & Mid-term assessment\\
+\textbf{20\% } & Final exam\\
+\end{tabular}
+\end{center}
+The base percentage-score-to-letter-grade conversion for this course is as follows: 
+
+\begin{center}
+\begin{tabular}{rl}
+\textbf{90\%}& or higher is guaranteed an A \\
+\textbf{80\%}& or higher is guaranteed a B \\
+\textbf{70\%}& or higher is guaranteed a C \\
+\textbf{60\%}& or higher is guaranteed a D \\
+\textbf{}& all lower grades are an F 
+\end{tabular}
+\end{center}
+These minimums may be lowered without notice but will not be raised. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Homework / Quizzes / In-class assignments}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Daily Quizzes}
+The purpose of each quiz is to ensure that students are staying current with the weekly content and to verify that they have acquired the skills developed in class. 
+Short quizzes are unannounced. 
+All quizzes will be in person, 
+%on blackboard, 
+Quizzes are graded on submission not on correctness as a way to judge the progress of the student body, please try your best but note when you're making an educated guess. 
+
+There will be no make-up on missed quizzes, but up to 3 quizzes can be dropped (missed) though the course of the semester.
+ 
+ \subsubsection{Long Quizzes}
+ Though the course of the semester we will have longer (graded) quizzes. 
+ The modality of the quizzes will either be in class or online (to be determined). 
+ They will be scheduled directly proceeding (the meeting before) each mid-term assessment and will cover similar material. 
+ Details on these long quizzes will be announced in class as they occur. 
+ 
+\subsubsection{In-class assignments}
+There will be unannounced in-class assignments, to be turned in either by the end of the class or within a short period of time after the class (details will be given for each assignment). 
+There will be no make-up for missed in-class assignments. 
+Grades of such assignments will weigh equally with grades from quizzes. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Exams \& Assessments}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+If you have test-taking difficulties in general, or if you have difficulties with our tests in particular, please request appropriate accommodation from UTEP’s Center for Accommodation and Students’ Services.
+
+The purpose of the midterm assessment is to allow you to demonstrate mastery of course concepts covered thus far during the semester. 
+Mid-term assessments will take place 
+in class 
+%on backboard with clear time constraints 
+and is tentatively scheduled to be held in week 8. 
+Make-up exams will be given only in extremely unusual circumstances. 
+If you must miss an exam, please meet with an instructor, \textit{BEFORE} the exam. 
+
+{\color{red}Students are required to be on time for assessments, a 10\% reduction to an assessment grade will be made if a student arrives more than 5 minutes after the start of the test, and 20\% at 10 minutes,.
+A 100\% deduction will be made after 15 minutes.}
+Arriving to a test late is disruptive to all students in the class and cannot be tolerated. 
+ 
+%\paragraph{Extra-credit opportunity:} 
+%for those students with (almost) perfect on-time homework (you can miss 1 deadline), a perfect grade of 100 will be added to the average making up the midterm exams grade.
+
+\textbf{\underline{The final exam will be comprehensive.}}
+You must take the final exam during the time shown in the schedule for the lecture section that you normally attend. 
+Do not "drop in" to another section: there will not be a copy of the exam for you. 
+This is University policy. If you have a scheduling conflict (e.g., if you are taking a final at EPCC) or if you are scheduled for three final exams in one day, see your instructor at least a week in advance for arranging accommodation.
+\begin{tcolorbox}[colback=green!5,colframe=green!75!black,title=Final Exam Date]
+\begin{center}
+\textbf{CRN 24876: Thursday, May 11th, 2023; 7:00 am--9:45 am}.\\
+\textbf{CRN 25983: Tuesday, May 9th, 2023; 1:00 pm--3:45 pm}.
+ \end{center}
+ \end{tcolorbox}
+
+\input{standing_resources}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Detailed Learning Outcomes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Level 3: Synthesis and Evaluation}
+Level 3 outcomes are those in which the student can apply the material in new situations. This is the highest level of mastery. On successful completion of this course, students will be able to identify, implement and use the following data structures as appropriate for a given problem:
+\begin{enumerate}
+\item \textbf{Proofs:} mechanics of proofs
+\item \textbf{Propositional logic:} propositions and operators, representation of knowledge in propositional logic,
+evaluation of propositions, relation to conditional statements, logical equivalence
+\item \textbf{Induction:} ability to lay out a proof by induction
+\end{enumerate}
+
+\subsection*{Level 2: Application and Analysis}
+Level 2 outcomes are those in which the student can apply the material in familiar situations, e.g., can work a problem of familiar structure with minor changes in the details. Upon successful completion of this course, students will be able to:
+\begin{enumerate}
+\item \textbf{Basic logical reasoning for propositional logic}
+\item \textbf{Sets, functions, relations, and their relation to logic}
+\end{enumerate}
+
+\subsection*{Level 1: Knowledge and Comprehension}
+Level 1 outcomes are those in which the student has been exposed to the terms and concepts at a basic level and can supply basic definitions. On successful completion of this course, students will be able to:
+\begin{enumerate}
+\item \textbf{Counting and its relevance to computer science}
+\item \textbf{Predicate logic:} understanding what it is, being able to represent knowledge in predicate logic, and write in
+English predicate logic expressions
+\item \textbf{Recurrence relations}
+\end{enumerate}
+
+
+%\tagstructbegin{tag=Document}
+\end{document}
