@@ -1,0 +1,79 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin=1in]{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{awesomebox}
+%SetFonts
+
+%SetFonts
+
+\usepackage{amsmath}
+%\DeclareMathOperator{\mod}{mod}
+\let\emptyset\varnothing
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\realsText}{$\mathbb{R}$}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\intsText}{$\mathbb{Z}$}
+
+\title{Homework 3}
+\author{Discrete Structures 2}
+\date{due: 28 February 2023, 8:00am}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+Your task for this homework will be to answer the following questions without using any calculating resources. 
+Your responses should be submitted via blackboard by the due date above as a PDF (submissions in any other format will be returned to the user and a resubmissions will be requested). 
+You are free to use whatever tools you would like to generate the response document: 
+scanned hand-written paper, 
+tablet generated hand-written, 
+microsoft word (with this option, please use the equation editor to correctly format your responses), 
+\LaTeX, etc.
+Your TA, IA, and Instructor are available to help during their designated office hours or via email 
+(note that emails sent during non-business hours may not be responded to until the next working day). 
+
+\importantbox{
+\textbf{Note:} all of these questions are on topics from chapters 5; thus you will only be proving by induction in this homework assignment. 
+}
+\begin{enumerate}
+% 5.2
+\item Prove the following claim holds $\forall n \in \ints^{\ge0}$ by induction on $n$:
+\[
+\sum_{i=0}^n i^3 = \frac{n^4 + 2n^3 + n^2}{4}
+\]
+
+%5.33
+\item Prove Bernoulli’s inequality by induction:  For an arbitrary $x\in\reals$, such that $x\ge-1$, 
+prove by induction on $n$ that
+\[
+(1+x)^n \ge1+nx
+\]
+for any positive integer $n$.
+
+%5.41
+\item Prove by induction on n that $8^n - 3^n$ is divisible by 5 for any nonnegative integer.
+\tipbox{This seems like it may use modulus somewhere in the proof, it does not.}
+
+%5.61
+\item Prove Cassini’s identity: $f_{n-1} \cdot f_{n+1} - (f_n)^2 = (-1)^n$ for any $n\ge2$, there $f_n$ is the $n$-th Fibonacci number. 
+\notebox{remember, the $n$-th Fibonacci number $f_n = f_{n-1} + f_{n-2}$ for all $n\ge 3$ and $f_1 = f_2 = 1$.}
+
+\clearpage
+%5.56
+\item Consider a sport in which teams can score two types of goals, 
+worth either 3 points or 7 points.
+For example, Team Miners might (theoretically speaking) score 32 points by accumulating, in succession, 3, 7, 3, 7, 3, 3, 3, and 3 points. 
+Find the smallest possible $n_0$ such that, for any $n\ge n_0$, a team can score exactly $n$ points in a game. 
+Prove your answer correct by strong induction.
+\notebox{This means you need to first figure out $n_0$, then prove that the claim is true for all larger $n$.}
+\tipbox{You may need to employ more than one base case here}
+\end{enumerate}
+
+\end{document}

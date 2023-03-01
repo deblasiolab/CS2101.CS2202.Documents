@@ -1,0 +1,82 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin=0.75in]{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+%SetFonts
+
+%SetFonts
+
+\usepackage{amsmath}
+%\DeclareMathOperator{\mod}{mod}
+
+\let\emptyset\varnothing
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\realsText}{$\mathbb{R}$}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\intsText}{$\mathbb{Z}$}
+\renewcommand{\mod}{\ \mathrm{mod}\ }
+
+
+\title{Correctness Quiz 1}
+\author{Discrete Structures 2}
+\date{21 February 2023, 9am}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+\begin{center}
+Name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\(please write legibly) 
+\end{center}
+
+\begin{enumerate}
+
+
+\item
+$\forall x,y\in\ints^{>1}$ such that $x < y$, what is the value of $x\mod y$?
+\vspace{3em}
+
+\item 
+$\forall z,q\in\ints^{>1}$ (with no other restriction), what is the maximum possible value of any number $q \mod z$?
+\vspace{3em}
+
+\item Let 
+\begin{itemize}
+\item $U = \left\{x \in \ints : x \in \left[1,20\right)\right\}$, 
+\item $A = \left\{y \in U: \left(y \mod 4 = 2\right) \text{ or } \left(y \mod 4 = 0\right)\right\}$, and
+\item $B = \left\{z \in U : \left(z \mod 6 = 4\right) \text{ or } \left(z \mod 6 = 2\right) \text{ or } \left(z \mod 6 = 0\right)\right\}$.
+\end{itemize}
+\begin{enumerate}
+\item Write $A$ by enumerating the items: 
+\vspace{1em}
+\item Write $B$ by enumerating the items:
+\vspace{1em}
+\item What is the value of $\left|A \cup B\right|$?
+\vspace{1em}
+\item What is the value of $\left|A \cap B\right|$?
+\vspace{1em}
+\item What is the set $A - B$?
+\vspace{1em}
+\item What is the set $B - A$?
+\vspace{1em}
+\item Is the statement $A \subseteq B$ true? why or why not? 
+\vspace{3em}
+\item Is the statement $A \subset B$ true? why or why not? 
+\vspace{3em}
+\end{enumerate}
+
+\clearpage
+\item Prove by \textbf{strong induction} on $n$ that,
+for every integer $n\ge4$,
+it is possible to make $n$ dollars using only two- and five-dollar bills. 
+(That is, prove that any integer $n\ge4$ can be written as $n = 2a + 5b$ for some integer $a \ge 0$ and some integer $b\ge 0$.)
+
+\end{enumerate}
+
+\end{document}

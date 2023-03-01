@@ -1,0 +1,101 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin=0.75in]{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+%SetFonts
+
+%SetFonts
+
+\usepackage{amsmath}
+%\DeclareMathOperator{\mod}{mod}
+
+\let\emptyset\varnothing
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\realsText}{$\mathbb{R}$}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\intsText}{$\mathbb{Z}$}
+\renewcommand{\mod}{\ \mathrm{mod}\ }
+
+
+\title{Correctness Quiz 1}
+\author{Discrete Structures 1}
+\date{16 February 2023, 12pm}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+\begin{center}
+Name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\(please write legibly) 
+\end{center}
+
+\begin{enumerate}
+
+
+\item
+If $x < y$, what is the value of $x\mod y$?
+\vspace{3em}
+
+\item 
+What is the maximum possible value of any number $\mod z$?
+\vspace{3em}
+
+\item Let 
+\begin{itemize}
+\item $U = \left\{x \in \ints : x \in \left[1,20\right)\right\}$, 
+\item $A = \left\{y \in U: \left(y \mod 4 = 2\right) \text{ or } \left(y \mod 4 = 0\right)\right\}$, and
+\item $B = \left\{z \in U : \left(z \mod 6 = 4\right) \text{ or } \left(z \mod 6 = 2\right) \text{ or } \left(z \mod 6 = 0\right)\right\}$.
+\end{itemize}
+\begin{enumerate}
+\item What is the value of $\left|A \cup B\right|$?
+\item What is the value of $\left|A \cap B\right|$?
+\item What is the set $A - B$?
+\item What is the set $B - A$?
+\item Is the statement $A \subseteq B$ true? why or why not? 
+\vspace{3em}
+\item Is the statement $A \subset B$ true? why or why not? 
+\vspace{3em}
+\item Can you rewrite $B$ without using any ``or'' s in the predicate? 
+\vspace{3em}
+\end{enumerate}
+
+\clearpage
+\item For the matrices below
+\[
+C = \left[\begin{matrix}
+5 & -9 \\
+\frac{4}{11} & 16\\
+\sqrt{2} & 5\\
+\end{matrix}\right] \text{ and }
+D = \left[\begin{matrix}
+3 & 7 & \sqrt{2} & 12.5\\
+-3 & 22 & 3 & \frac{3}{2}\\
+\end{matrix}\right]
+\]
+\begin{enumerate}
+\item Is it valid to compute $CD$ using matrix multiplication? If so, what are the dimensions of the result; if not, why not? 
+\vspace{3em}
+\item Is it valid to compute $DC$ using matrix multiplication? If so, what are the dimensions of the result; if not, why not? 
+\vspace{3em}
+\item In the matrix (or matrices) that results from parts (a) and (b), how many elements are irrational. If neither is possible put ``Neither is Possible''. 
+\vspace{3em}
+\end{enumerate}
+
+\item Ceiling ($\lceil \;\;\rceil$) is a function that maps from (a)\_\_\_\_\_\_\_\_ to  (b)\_\_\_\_\_\_\_\_. (fill in the blank with a symbol)\\
+
+Where \_\_\_\_\_\_\_\_  (copy response from a above) is: (explain what the symbol represents)\\
+\vspace{4em}
+
+and \_\_\_\_\_\_\_\_  (copy response from b above) is: (explain what the symbol represents)
+
+\vspace{4em}
+
+\end{enumerate}
+
+\end{document}
