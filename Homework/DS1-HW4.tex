@@ -1,0 +1,88 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin=1in]{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{awesomebox}
+%SetFonts
+
+%SetFonts
+
+\usepackage{amsmath}
+\DeclareMathOperator{\plainmod}{\text{ mod }}
+\let\emptyset\varnothing
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\realsText}{$\mathbb{R}$}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\intsText}{$\mathbb{Z}$}
+
+\title{Homework 4}
+\author{Discrete Structures 1}
+\date{due: 30 March 2023, 8:00am}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+Your task for this homework will be to answer the following questions without using any calculating resources. 
+Your responses should be submitted via blackboard by the due date above as a PDF (submissions in any other format will be returned to the user and a resubmissions will be requested). 
+You are free to use whatever tools you would like to generate the response document: 
+scanned hand-written paper, 
+tablet generated hand-written, 
+microsoft word (with this option, please use the equation editor to correctly format your responses), 
+\LaTeX, etc.
+Your TA, IA, and Instructor are available to help during their designated office hours or via email 
+(note that emails sent during non-business hours may not be responded to until the next working day). 
+
+%\importantbox{
+%\textbf{Note:} all of these questions are on topics from chapters 5; thus you will only be proving by induction in this homework assignment. 
+%}
+\begin{enumerate}
+
+\item True or False: it is always the case that
+\[
+a\mod 10 = (a+100)\plainmod 10 = (a-10)\plainmod 100
+\]
+for some $a\ge 20$. Justify your answer. 
+
+\item What is 
+\[
+\left|\left\{x\plainmod y : x \in \ints^{\ge 0}\right\}\right|
+\]
+for a fixed, but arbitrary, number $y\in\ints^{\ge1}$? 
+(note this is the set size, not the set itself.)
+
+\item Reduce the following to a polynomial on $x$ (that is an equation that involves only x):
+\[
+\sum_{c=3}^5 \sum_{d=1}^c x^d
+\]
+
+%2.145
+\item Supposed $A\times B = \{\langle1,1\rangle, \langle2,1\rangle\}$. What are the sets $A$ and $B$? \\(note that $\times$ is not multiplication, its cartesian product)
+
+%2.174
+\item For the vector $c=\langle 4 , 0 \rangle$, what is the value of $c\cdot c$? \\(note that $\cdot$ is not multiplication, its dot product)
+
+%2.233-2.242
+\item State the \textbf{domain} and \textbf{range} of the following functions, be as precise as possible (that means if you can place a restriction on one of our known sets, do so; i.e. $\mathbb{Z}^{\ge1}$ rather than just $\mathbb{Z}$).
+\begin{enumerate}
+\item $f(x) = |x|$
+\item $f(x) = \lfloor x \rfloor$
+\item $f(x) = x \mod 2$
+\item $f(x) = 2 \mod x$
+\end{enumerate}
+
+%3.78-3.80
+\item Show (using a truth table) that the following equivalences hold: 
+\begin{enumerate}
+\item $p \vee (q \vee r) \equiv (p \vee q) \vee r$
+\item $p \wedge (q \wedge r) \equiv (p \wedge q) \wedge r$
+\item $p \oplus (q \oplus r) \equiv (p \oplus q) \oplus r$
+\end{enumerate}
+\end{enumerate}
+\end{document}

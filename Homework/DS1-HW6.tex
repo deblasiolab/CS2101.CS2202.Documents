@@ -1,0 +1,68 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin=1in]{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{awesomebox}
+%SetFonts
+
+%SetFonts
+
+\usepackage{amsmath}
+\DeclareMathOperator{\plainmod}{\text{ mod }}
+\let\emptyset\varnothing
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\realsText}{$\mathbb{R}$}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\intsText}{$\mathbb{Z}$}
+
+\title{Homework 6}
+\author{Discrete Structures 1}
+\date{due: 20 April 2023, 8:00am}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+Your task for this homework will be to answer the following questions without using any calculating resources. 
+Your responses should be submitted via blackboard by the due date above as a PDF (submissions in any other format will be returned to the user and a resubmissions will be requested). 
+You are free to use whatever tools you would like to generate the response document: 
+scanned hand-written paper, 
+tablet generated hand-written, 
+microsoft word (with this option, please use the equation editor to correctly format your responses), 
+\LaTeX, etc.
+Your TA, IA, and Instructor are available to help during their designated office hours or via email 
+(note that emails sent during non-business hours may not be responded to until the next working day). 
+
+%\importantbox{
+%\textbf{Note:} all of these questions are on topics from chapters 5; thus you will only be proving by induction in this homework assignment. 
+%}
+\begin{enumerate}
+\item If you wanted to prove the following claim \emph{by cases}, what would the cases be that you're going to divide the problem into:
+\begin{center}
+\textit{\textbf{claim:} For any number $x\in\ints$, $x^2$ is even.}
+\end{center}
+
+\item Prove that the binary representation of any odd integer ends with a 1.
+
+\item We want a \emph{proof by contrapositive} for the following claim, what is the contrapositive of the statement:
+\begin{center}
+\textit{\textbf{claim:} Let $n\in\ints^{\ge0}$. If $n\mod4\in\{2,3\}$, then $n$ is not a perfect square.}
+\end{center}
+
+\item If you were to prove the following claim using \emph{proof by contradiction}, what would be the initial assumption:
+\begin{center}
+\textit{\textbf{claim:} Let $x, y \in\reals$.  If $x^2-y^2 = 1$, then $x$ or $y$ (or both) is not an integer.}
+\end{center}
+
+\item Disprove the following \emph{by counterexample}: \textit{If $x-y$ is rational, then $x$ and $y$ are rational.}
+
+\item Prove that the area of a right triangle with legs $x$ and $y$ is $xy/2$.
+
+\end{enumerate}
+\end{document}

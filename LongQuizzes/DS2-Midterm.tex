@@ -1,0 +1,165 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin=0.75in]{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+%SetFonts
+
+%SetFonts
+
+\usepackage{amsmath}
+%\DeclareMathOperator{\mod}{mod}
+
+\let\emptyset\varnothing
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\realsText}{$\mathbb{R}$}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\intsText}{$\mathbb{Z}$}
+\renewcommand{\mod}{\ \mathrm{mod}\ }
+
+
+\title{Midterm Exam}
+\author{Discrete Structures 2}
+\date{9 March 2023, 9am}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+\begin{center}
+Name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\(please write legibly) 
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|l|l|}
+\hline
+\textbf{Question} & \multicolumn{1}{|c|}{\textbf{Topic}} & \multicolumn{1}{|c|}{\textbf{Value}}\\
+\hline
+\hline
+1 & (modulus) & \hspace{3em}/20\\ \hline
+2 & (modulus) & \hspace{3em}/20\\ \hline
+3 & (counting) & \hspace{3em}/60\\ \hline
+4 & (counting) & \hspace{3em}/70\\ \hline
+5 & (induction) &  \hspace{3em}/120\\ \hline
+6 & (induction) & \hspace{3em}/60\\ \hline
+6 & (induction) & \hspace{3em}/80\\ \hline
+7 & (proof) & \hspace{3em}/50\\ \hline
+ & \textbf{bonus} &\\ \hline
+ \hline
+\hline
+\multicolumn{2}{|l|}{\textbf{Total}} & \hspace{4em}/480\\
+\hline
+\end{tabular}
+\end{center}
+
+
+\textbf{\underline{There are a few rules:}}
+
+(1) You are not allowed to use outside online resources. 
+No outside help (e.g., from a classmate, a friend, online search, documents on your own laptop, etc.) will be tolerated. 
+Any attempt to obtain help or information about the exam will be reported.
+
+(2) \textbf{You are not allowed to use headphones during the exam.} Your phone should be in your backpack.
+
+(3) You should only have a pencil, an eraser, and a pencil sharpener with you on the table at the time of the exam. 
+Everything else should be safely packed in your backpack and not to be used at any time during the exam.
+
+(4) You were told to attend to the bathroom before the exam starts: 
+you will not be allowed to leave the room during the first hour of the exam (unless you have a doctor’s note to indicate otherwise).
+
+\textbf{\underline{A few pieces of advice:}}
+
+(1) Read the questions carefully and try the tracing exercises on draft paper before you answer on your exam copy.
+
+(2) Pay careful attention to the instructions written in the exam.
+
+\textbf{\underline{Please write legibly and in a structured manner:}} 
+keep in mind that what you write needs to be read. Answers that are unreadable or hard to follow will not receive full credit.
+
+
+
+\clearpage
+\begin{enumerate}
+
+\item
+For a given $x\in\mathbb{Z}^{\ge1}$, what is minimum value of \underline{$x\mod 20$}? What is the maximum? 
+\vspace{3em}
+
+\item 
+For a given $\ell \in\mathbb{Z}^{\ge1}$ and $y\in\mathbb{Z}^{\ge0}$, what is the relationship between the values of \underline{$\ell\mod y$} and \underline{$(\ell + y) \mod y$}?
+\vspace{3em}
+
+
+\item
+For the first decade or so of Twitter’s existence, a tweet was a sequence of at most 140 characters. (This length restriction was loosened in 2017.) Assuming there are 256 valid characters that can appear in each position, how many distinct tweets are possible? (no need for a calculator, you can leave the number unreduced)
+\vspace{6em}
+
+\item 
+One of your relatives was given a piece of paper with the password to a wireless access point that was written as follows: a154bc0401011. 
+But they couldn’t tell from this handwriting whether each “1” was 1 (one), $\ell$ (ell), or \texttt{I} (eye); 
+or whether “0” was $0$ (zero) or \texttt{O} (oh). 
+How many possible passwords would she have to try before having exhausted all of the possibilities? 
+(again, no need for a calculator, you can leave the number unreduced)
+
+\vspace{6em}
+
+\item For the following questions, use the following task:
+
+We want to prove by \textbf{strong induction} on $n$ that,
+for every integer $n\ge4$,
+it is possible to make $n$ dollars using only two- and five-dollar bills. 
+(That is, prove that any integer $n\ge4$ can be written as $n = 2a + 5b$ for some integer $a \ge 0$ and some integer $b\ge 0$.)
+
+\begin{enumerate}
+\item \label{subq:baseCaseNumbers}For what value(s) of $n$ would we need to prove as the base case(s):  \vspace*{1em}\\\hspace*{4em}$n=$\\
+\item Provide the proof(s) of the base case(s) noted in part \ref{subq:baseCaseNumbers}:
+\vspace{6em}
+\item What would be the inductive hypothesis (remember this is \textbf{strong} induction)? 
+\vspace{6em}
+
+\end{enumerate}
+
+\item We want to prove by induction that $2^n \le n!$ for large enough $n\in \ints^{\ge 1}$, find the base case for this problem.%
+\footnote{Remember that $n! = 1 \cdot 2 \cdot 3 \cdot ... \cdot n$} 
+(That is, find the smallest value such that the inequality starts to become true.)
+\vspace{8em}
+
+\item Complete the proof below:
+We will prove by \textit{weak} induction on $n$ that \[\sum_{i=1}^{n}f_i = f_{n+2}-1\] (where $f_k$ is the $k$-th fibonacci number). 
+
+\textbf{Base cases} ($n=1$ and $n=2$):
+ \[\sum_{i=1}^{1}f_i = f_1 = 1 = 2 - 1 = f_{3}-1\] and
+ \[\sum_{i=1}^{2}f_i = f_1 + f_2 = 1 + 1 = 2 = 3 - 1 = f_{4}-1.\]
+ 
+\textbf{Inductive case} ($n\ge 3$):\\
+\hspace*{3em}We will assume the inductive hypothesis holds for $n-1$, that is $\sum_{i=1}^{n-1}f_i = f_{n+1}-1$. \\
+\hspace*{3em} (note you will likely use direct prove to complete the rest of the inductive case)
+ \vspace{16em}
+
+%\item Prove the following claim (remember our various prove techniques: direct, contrapositive, contradiction, by cases, etc): 
+%\[
+%|x| - |y| \le |x-y|
+%\]
+\item Prove or disprove the following: if $xy$ and $x$ are rational, $y$ must also be rational. 
+\vspace{6em}
+
+
+\clearpage
+\item BONUS: 
+\begin{enumerate}
+\item $|\ints|=$
+\item $|\mathbb{Q}|=$
+\item $|\reals|=$
+\item True or False: $|\ints| = |\reals|$
+\item True or False: $|\mathbb{Q}| \le |\reals|$
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
+

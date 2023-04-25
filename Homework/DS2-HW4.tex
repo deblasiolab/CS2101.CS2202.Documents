@@ -1,0 +1,82 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin=1in]{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{awesomebox}
+%SetFonts
+
+%SetFonts
+
+\usepackage{amsmath}
+%\DeclareMathOperator{\mod}{mod}
+\let\emptyset\varnothing
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\realsText}{$\mathbb{R}$}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\intsText}{$\mathbb{Z}$}
+
+\title{Homework 4}
+\author{Discrete Structures 2}
+\date{due: 30 March 2023, 8:00am}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+Your task for this homework will be to answer the following questions without using any calculating resources. 
+Your responses should be submitted via blackboard by the due date above as a PDF (submissions in any other format will be returned to the user and a resubmissions will be requested). 
+You are free to use whatever tools you would like to generate the response document: 
+scanned hand-written paper, 
+tablet generated hand-written, 
+microsoft word (with this option, please use the equation editor to correctly format your responses), 
+\LaTeX, etc.
+Your TA, IA, and Instructor are available to help during their designated office hours or via email 
+(note that emails sent during non-business hours may not be responded to until the next working day). 
+
+%\importantbox{
+%\textbf{Note:} all of these questions are on topics from chapters 5; thus you will only be proving by induction in this homework assignment. 
+%}
+\begin{enumerate}
+
+\item Complete the proof below:
+We will prove by \textit{weak} induction on $n$ that \[\sum_{i=1}^{n}f_i = f_{n+2}-1\] (where $f_k$ is the $k$-th fibonacci number). 
+
+\textbf{Base cases} ($n=1$ and $n=2$):
+ \[\sum_{i=1}^{1}f_i = f_1 = 1 = 2 - 1 = f_{3}-1\] and
+ \[\sum_{i=1}^{2}f_i = f_1 + f_2 = 1 + 1 = 2 = 3 - 1 = f_{4}-1.\]
+ 
+\textbf{Inductive case} ($n\ge 3$):\\
+\hspace*{3em}We will assume the inductive hypothesis holds for $n-1$, that is $\sum_{i=1}^{n-1}f_i = f_{n+1}-1$. \\
+\hspace*{3em} (note you will likely use direct prove to complete the rest of the inductive case,\\ 
+\hspace*{3em} remember to start with the original proposition)
+
+\item A string over an alphabet $\Sigma$ is a sequence of elements of a set --- that is, a string $x$ over $\Sigma$ satisfies $x \in \Sigma^n$ for some length $n\ge 0$.
+How many strings of length \textit{at most} $n$ over the alphabet $\Sigma = \{\texttt{A},\texttt{B},...,\texttt{Z},\text{\textvisiblespace}\}$ are there? 
+How many contain exactly 2 ``words'' (that is they contain exactly one space and its not in the first or last position). 
+
+\clearpage
+\item Define a palindrome bit string as one that satisfies one of the following conditions: 
+\begin{itemize}
+\item the empty string (containing no bits);
+\item the string \texttt{0};
+\item the string \texttt{1};
+\item the string \texttt{0x0} where \texttt{x} is a palindrome bit string; or 
+\item the string \texttt{1x1} where \texttt{x} is a palindrome bit string.
+\end{itemize}
+Further define $\#0(s)$ and $\#1(s)$ to be the number of \texttt{0}s and \texttt{1}s respectively in a string $s$.
+
+Prove by \textbf{structural induction}, that is induction not over the string $s$, that the proposition $P$ holds for all palindrome bit strings $s$:
+\[ P(s):\text{ the value of }[\#0(s)] \cdot [\#1(s)]\text{ is even} \]
+(note that the two numbers are multiplied not summed).
+
+\tipbox{The structure of your proof will likely be on the cases in the definition of palindrome bit strings, notice some cases rely on others}
+
+\end{enumerate}
+
+\end{document}
