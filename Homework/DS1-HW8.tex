@@ -1,0 +1,96 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin=1in]{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{awesomebox}
+%SetFonts
+
+%SetFonts
+
+\usepackage{amsmath}
+\DeclareMathOperator{\plainmod}{\text{ mod }}
+\let\emptyset\varnothing
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\realsText}{$\mathbb{R}$}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\intsText}{$\mathbb{Z}$}
+
+\title{Homework 8}
+\author{Discrete Structures 1}
+\date{due: 4 May 2023, 8:00am}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+Your task for this homework will be to answer the following questions without using any calculating resources. 
+Your responses should be submitted via blackboard by the due date above as a PDF (submissions in any other format will be returned to the user and a resubmissions will be requested). 
+You are free to use whatever tools you would like to generate the response document: 
+scanned hand-written paper, 
+tablet generated hand-written, 
+microsoft word (with this option, please use the equation editor to correctly format your responses), 
+\LaTeX, etc.
+Your TA, IA, and Instructor are available to help during their designated office hours or via email 
+(note that emails sent during non-business hours may not be responded to until the next working day). 
+
+%\importantbox{
+%\textbf{Note:} all of these questions are on topics from chapters 5; thus you will only be proving by induction in this homework assignment. 
+%}
+\begin{enumerate}
+% 2.61
+\item What is the smallest positive integer $n$, where $n\bmod 2=0$, $n\bmod3=0$, and $n\bmod5=0$?
+
+%2.85
+\item Compute the following nested sum (and show each step): $\displaystyle \sum_{i=1}^4\sum_{j=i}^4 \left(j^i\right)$
+
+
+%2.137
+\item What is the power set of$\{1,a\}$?
+
+\item 
+Given the vectors $v = \langle \sqrt{2}, 5\rangle$ and $w = \langle \sqrt{2}, 12\rangle$, 
+is $v \cdot w$ rational or irrational? 
+(note this is the dot product not multiplication since $v$ and $w$ are vectors.)
+
+%2.147
+\item Let $S = \{1,2,3,4,5,6,7,8\}$, and let $T$ be an unknown set.
+suppose that $S\times T=\emptyset$.
+What can you conclude about $T$?
+
+%2.251
+\item Let $f(x)=3x+1$ and let $g(x)=2x$. 
+Identify a function $h$ such that $g\circ h$ and $f$ are identical.
+(For example, the function $f \circ g$ is given by the definition $(f \circ g)(x) = f(g(x)) = 6x + 1$.)
+
+%2.269
+\item Consider $f:\mathbb{R}\rightarrow\mathbb{R}$, where $f(x)=3x+1$.
+What is the inverse of $f$?
+
+%4.95
+\item For the following false claim and a bogus proof of that false claim 
+(a) identify the precise error in the proof, and 
+(b) give a counterexample to the claim. 
+(Note that saying why the claim is false does not address (a) in the slightest—it would be possible to give a bogus proof of a true claim!)
+
+\textbf{False Claim 1.} 
+Let $n$ be a positive integer and let $p, q \in \ints^{\ge2}$ , where $p$ and $q$ are prime. 
+If $n$ is evenly divisible by
+both $p$ and $q$, then $n$ is also evenly divisible by $pq$.
+
+\textbf{Bogus proof.} 
+Because $p | n$, there exists a positive integer $k$ such that $n = pk$. 
+Thus, by assumption, we know that $q | pk$. 
+Because $p$ and $q$ are both prime, 
+we know that $p$ does not evenly divide $q$, and thus the only way that $q | pk$ can hold is if $q | k$. 
+Hence $k = q\ell$ for some positive integer $\ell$, and thus $n = pk = pq\ell$. 
+Therefore $pq | n$.
+
+
+\end{enumerate}
+\end{document}
