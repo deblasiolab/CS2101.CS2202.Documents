@@ -1,0 +1,211 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin=0.75in]{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+%SetFonts
+
+%SetFonts
+
+\usepackage{amsmath}
+%\DeclareMathOperator{\mod}{mod}
+
+\let\emptyset\varnothing
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\realsText}{$\mathbb{R}$}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\intsText}{$\mathbb{Z}$}
+\renewcommand{\mod}{\ \mathrm{mod}\ }
+
+
+\title{Final Exam}
+\author{Discrete Structures 1}
+\date{11 May 2023}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+\begin{center}
+Name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\(please write legibly) 
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|l|l|}
+\hline
+\textbf{Question} & \multicolumn{1}{|c|}{\textbf{Topic}} & \multicolumn{1}{|c|}{\textbf{Value}}\\
+\hline
+\hline
+1 & (functions) & \hspace{3em}/36\\ \hline
+2 & (predicate logic) & \hspace{3em}/30\\ \hline
+3 & (propositional logic) & \hspace{3em}/35\\ \hline
+4 & (propositional logic) & \hspace{3em}/30\\ \hline
+5 & (proof by contradiction) & \hspace{3em}/30\\ \hline
+6 & (proof by contrapositive) & \hspace{3em}/40\\ \hline
+7 & (proofs) & \hspace{3em}/30\\ \hline
+8 & (proofs) &  \hspace{3em}/15\\ \hline
+9 & (proof by cases) & \hspace{3em}/40\\ \hline
+10 & (proofs) & \hspace{3em}/15\\ \hline
+ & \textbf{bonus} &\\ \hline
+ \hline
+\hline
+\multicolumn{2}{|l|}{\textbf{Total}} & \hspace{4em}/301\\
+\hline
+\end{tabular}
+\end{center}
+
+
+\textbf{\underline{There are a few rules:}}
+
+(1) You are not allowed to use outside online resources. 
+No outside help (e.g., from a classmate, a friend, online search, documents on your own laptop, etc.) will be tolerated. 
+Any attempt to obtain help or information about the exam will be reported.
+
+(2) \textbf{You are not allowed to use headphones during the exam.} Your phone should be in your backpack.
+
+(3) You should only have a pencil (or pen), an eraser, and a pencil sharpener with you on the table at the time of the exam. 
+Everything else should be safely packed in your backpack and not to be used at any time during the exam.
+
+(4) You were told to attend to the bathroom before the exam starts: 
+you will not be allowed to leave the room during the first hour of the exam (unless you have a doctor’s note to indicate otherwise).
+
+\textbf{\underline{A few pieces of advice:}}
+
+(1) Read the questions carefully and try the tracing exercises on draft paper before you answer on your exam copy.
+
+(2) Pay careful attention to the instructions written in the exam.
+
+\textbf{\underline{Please write legibly and in a structured manner:}} 
+keep in mind that what you write needs to be read. Answers that are unreadable or hard to follow will not receive full credit.
+
+
+
+
+\clearpage
+
+\begin{enumerate}
+
+\item 
+Select the smallest size set that represents the domain and range of each of the following functions:
+\begin{center}
+\begin{tabular}{lcc}
+Function & Domain & Range\\
+\hline
+\hline
+\vspace{-.5em}\\
+$f(x) = x \mod 3$ & \_\_\_\_\_\_\_\_\_ & \_\_\_\_\_\_\_\_\_ \vspace{.5em}\\
+$g(x) = 3 \mod \left(\left(x \mod 2\right) + 4 \right)$ & \_\_\_\_\_\_\_\_\_ & \_\_\_\_\_\_\_\_\_ \vspace{.5em}\\
+$h(x) = 3x^2+\pi x + \sqrt{2}$ & \_\_\_\_\_\_\_\_\_ & \_\_\_\_\_\_\_\_\_ \vspace{.5em}\\
+$\ell(x) = \left|\left\lfloor x\right\rfloor\right|$ & \_\_\_\_\_\_\_\_\_ & \_\_\_\_\_\_\_\_\_ \vspace{.5em}\\
+$e(x) = \left| x\right|$ & \_\_\_\_\_\_\_\_\_ & \_\_\_\_\_\_\_\_\_ \vspace{.5em}\\
+$r(x) = x \mod 4 + \frac{3}{2}$ & \_\_\_\_\_\_\_\_\_ & \_\_\_\_\_\_\_\_\_ \vspace{.5em}\\
+\end{tabular}
+\begin{tabular}{ll}
+(A) \intsText &  (H) $\{0\}$\\
+(B) $\ints^{\ge1}$ & (K) $\{1\}$\\
+(C) $\ints^{\ge0}$ & (M) $\{2\}$\\
+(D) \realsText & (N) $\{3\}$\\
+(E) $\reals^{\ge1}$ & (O) $\{0,1\}$\\
+(F) $\reals^{\ge0}$ & (P) $\{0,1,2\}$\\
+(G) $\emptyset$ & (Q) $\{0,1,2,3\}$\\ 
+\end{tabular}
+\end{center}
+
+\item
+For each of the following statements, write a qualified predicate logic statement. 
+The variables will be given in parenthesis. 
+\begin{enumerate}
+\item Some student ($s\in S$) in the class has the highest grade ($g(s)$) in the class. 
+(you will likely need to define a second student $t\in S$). \vspace{3em}
+\item For all topics topics ($t\in T$) there is at least one questions ($q\in Q$) that at least one student ($s\in S$) will get correct ($C(t,q,s)=true$).\vspace{3em}
+\end{enumerate}
+
+\item \label{q:truthtable} Construct a truth table to evaluate the following expression:
+\[
+%\left(p \wedge \neg q\right) \vee \left(\neg q \wedge \neg r\right)
+\left(p \vee \neg q\right) \wedge \left(\neg q \vee \neg r\right)
+\]
+\vspace{18em}
+
+\clearpage
+\item Using the expression and truth table from Question~\ref{q:truthtable}, answer the following:
+\begin{enumerate}
+\item Is the expression a tautology? why or why not? \vspace{3em}
+\item Is the expression satisfiable? Why or why not? \vspace{3em}
+\item Is the expression in Disjunctive Normal Form, Conjunctive Normal Form, or neither? Explain your response. \vspace{3em}
+\end{enumerate}
+
+
+\item We want to prove the following using contradiction, \textbf{what is the initial assumption}?
+\begin{center}
+\textit{Any product $xy$ of two odd numbers $x$ and $y$ is odd.}
+\end{center}
+\vspace{3em}
+
+
+\item If instead we wanted to prove the claim in the previous question by \textit{contrapositive}, 
+\begin{enumerate}
+\item assuming we represent the initial implication as $p \implies q$, what is $p$?
+\vspace{2em}
+\item what is $q$?
+\vspace{2em}
+\item what is $\neg q$?
+\vspace{2em}
+\item what is $\neg p$?
+\vspace{2em}
+\end{enumerate}
+
+
+\item Prove the following claim: 
+\begin{center}
+\textit{There is a course taught in the CS department, that is one credit hour. }
+\end{center}
+\vspace{3em}
+
+\item Disprove the following: \textit{A coin system with coins of value 4 and 7 cents can make any amount of change above 11 cents.}
+\vspace{3em}
+
+
+
+\clearpage
+\item We want to prove the claim below:
+\begin{center}
+\textit{For all numbers $x\in\ints^{\ge1}$, if $x\mod 8 \in\{2,3,6,7\}$ \\
+then the second to last bit in the binary representation is a 1.}
+\end{center}
+\begin{enumerate}
+\item what would the different cases be in a proof by cases? \vspace{8em}
+\item once we have proven each of the cases (no need to do it here, just assume we did), 
+what is the final step in a proof by cases? (you should provide the final statement/argument.)\vspace{8em}
+\end{enumerate}
+
+\item Identify and describe the flaw in the following direct proof. 
+
+\textbf{False Claim:} 1=0
+
+\begin{proof}
+Let $x, y \in \ints^{\ge1}$ where $x=y$.
+\[
+\begin{aligned}
+x &= y & \text{by assumption}\\
+x^2 &= x\cdot y & \text{multiply both sides by $x$}\\
+x^2 - y^2 &= x\cdot y - y^2 & \text{subtract $y^2$ from both sides}\\ 
+\left(x-y\right)\left(x+y\right) &= y \left(x-y\right) & \text{algebra}\\
+x + y &= y & \text{divide both sides by $(x-y)$}\\
+2 y &= y & \text{because $x=y$}\\
+2 &= 1 & \text{divide by $y$, which is non-zero}\\
+1 &= 0 & \text{subtract 1 from both sides}\\
+\end{aligned}
+\]
+\end{proof}
+\vspace{5em}
+
+\end{enumerate}
+
+\end{document}

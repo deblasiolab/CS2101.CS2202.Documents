@@ -1,0 +1,228 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage[margin=0.75in]{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+%SetFonts
+
+%SetFonts
+
+\usepackage{amsmath}
+%\DeclareMathOperator{\mod}{mod}
+
+\let\emptyset\varnothing
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\realsText}{$\mathbb{R}$}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\intsText}{$\mathbb{Z}$}
+\renewcommand{\mod}{\ \mathrm{mod}\ }
+
+
+\title{Final Exam}
+\author{Discrete Structures 2}
+\date{8 May 2023}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+\begin{center}
+Name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\(please write legibly) 
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|l|l|}
+\hline
+\textbf{Question} & \multicolumn{1}{|c|}{\textbf{Topic}} & \multicolumn{1}{|c|}{\textbf{Value}}\\
+\hline
+\hline
+1 & (functions) & \hspace{3em}/24\\ \hline
+2 & (induction) & \hspace{3em}/25\\ \hline
+3 & (induction) & \hspace{3em}/24\\ \hline
+4 & (graphs) & \hspace{3em}/25\\ \hline
+5 & (counting) &  \hspace{3em}/25\\ \hline
+6 & (counting) & \hspace{3em}/25\\ \hline
+7 & (graphs/counting) & \hspace{3em}/25\\ \hline
+8 & (graphs) & \hspace{3em}/25\\ \hline
+9 & (counting) & \hspace{3em}/25\\ \hline
+10 & (asymptotics) & \hspace{3em}/30\\ \hline
+11 & (proofs) & \hspace{3em}/25\\ \hline
+ \hline
+\hline
+\multicolumn{2}{|l|}{\textbf{Total}} & \hspace{4em}/275\\
+\hline
+\end{tabular}
+\end{center}
+
+
+\textbf{\underline{There are a few rules:}}
+
+(1) You are not allowed to use outside online resources. 
+No outside help (e.g., from a classmate, a friend, online search, documents on your own laptop, etc.) will be tolerated. 
+Any attempt to obtain help or information about the exam will be reported.
+
+(2) \textbf{You are not allowed to use headphones during the exam.} Your phone should be in your backpack.
+
+(3) You should only have a pencil (or pen), an eraser, and a pencil sharpener with you on the table at the time of the exam. 
+Everything else should be safely packed in your backpack and not to be used at any time during the exam.
+
+(4) You were told to attend to the bathroom before the exam starts: 
+you will not be allowed to leave the room during the first hour of the exam (unless you have a doctor’s note to indicate otherwise).
+
+\textbf{\underline{A few pieces of advice:}}
+
+(1) Read the questions carefully and try the tracing exercises on draft paper before you answer on your exam copy.
+
+(2) Pay careful attention to the instructions written in the exam.
+
+\textbf{\underline{Please write legibly and in a structured manner:}} 
+keep in mind that what you write needs to be read. Answers that are unreadable or hard to follow will not receive full credit.
+
+
+
+
+\clearpage
+
+\begin{enumerate}
+
+\item 
+Select the smallest size set that represents the domain and range of each of the following functions:
+\begin{center}
+\begin{tabular}{lcc}
+Function & Domain & Range\\
+\hline
+\hline
+\vspace{-.5em}\\
+$f(x) = x \mod 3$ & \_\_\_\_\_\_\_\_\_ & \_\_\_\_\_\_\_\_\_ \vspace{.5em}\\
+$g(x) = 3 \mod \left(\left(x \mod 2\right) + 4 \right)$ & \_\_\_\_\_\_\_\_\_ & \_\_\_\_\_\_\_\_\_ \vspace{.5em}\\
+$h(x) = 3x^2+\pi x + \sqrt{2}$ & \_\_\_\_\_\_\_\_\_ & \_\_\_\_\_\_\_\_\_ \vspace{.5em}\\
+$\ell(x) = \left|\left\lfloor x\right\rfloor\right|$ & \_\_\_\_\_\_\_\_\_ & \_\_\_\_\_\_\_\_\_ \vspace{.5em}\\
+$e(x) = \left| x\right|$ & \_\_\_\_\_\_\_\_\_ & \_\_\_\_\_\_\_\_\_ \vspace{.5em}\\
+$r(x) = x \mod 4 + \frac{3}{2}$ & \_\_\_\_\_\_\_\_\_ & \_\_\_\_\_\_\_\_\_ \vspace{.5em}\\
+\end{tabular} \hspace{0em}
+\begin{tabular}{ll}
+(A) \intsText &  (H) $\{0\}$\\
+(B) $\ints^{\ge1}$ & (K) $\{1\}$\\
+(C) $\ints^{\ge0}$ & (M) $\{2\}$\\
+(D) \realsText & (N) $\{3\}$\\
+(E) $\reals^{\ge1}$ & (O) $\{0,1\}$\\
+(F) $\reals^{\ge0}$ & (P) $\{0,1,2\}$\\
+(G) $\emptyset$ & (Q) $\{0,1,2,3\}$\\ 
+\end{tabular}
+\end{center}
+
+%%%%%%%%%%%%%%%%
+\item Complete the proof below:
+We will prove by \textit{weak} induction on $n$ that \[\sum_{i=1}^{n}f_i = f_{n+2}-1\] (where $f_k$ is the $k$-th fibonacci number). 
+
+\textbf{Base cases} ($n=1$ and $n=2$):
+ \[\sum_{i=1}^{1}f_i = f_1 = 1 = 2 - 1 = f_{3}-1\] and
+ \[\sum_{i=1}^{2}f_i = f_1 + f_2 = 1 + 1 = 2 = 3 - 1 = f_{4}-1.\]
+ 
+\textbf{Inductive case} ($n\ge 3$):\\
+\hspace*{3em}We will assume the inductive hypothesis holds for $n-1$, that is $\sum_{i=1}^{n-1}f_i = f_{n+1}-1$. \\
+\hspace*{3em} (note you will likely use direct prove to complete the rest of the inductive case)
+ \vspace{16em}
+ 
+ \clearpage
+%%%%%%%%%%%%%%%%
+\item We want to prove the following by some type of induction, answer the questions below. 
+\begin{center}
+\textit{
+For $x\in\ints^{>0}$ that are powers of two,\\
+the closed for solution of the recurrence relation $T(x) = 3T(\frac{n}{2}) + 4$
+is $\Theta\left(3^{\log n}\right)$
+}
+\end{center}
+\begin{enumerate}
+\item What type of induction will we use? (i.e. ``weak'', strong, structural, etc) Why?\vspace{3em}
+\item What value of $x$ will be the base case? \vspace{3em}
+\item What is the \textit{inductive hypothesis}? (not the whole inductive step)\vspace{3em}
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%
+\item We know that a tree is a connected acyclic graph. 
+Prove or disprove: 
+\begin{center}
+\textit{Any graph $G=\langle V,E\rangle$ with $|E|=|V|-1$ 
+must be a tree. }
+\end{center}
+\vspace{5em}
+
+
+%%%%%%%%%%%%%%%%
+\item How many permutations are there of \texttt{SUMMER}? \vspace{5em}
+
+%%%%%%%%%%%%%%%%
+\item You're taking a classics class this semester that required you to buy $y$ books, 
+but only $x$ of them fit in your backpack at once. 
+What formula describes the number of combinations 
+you must consider when choosing what to bring to campus on any given day? \vspace{5em}
+
+%%%%%%%%%%%%%%%%
+\item Thinking about the graphs quiz, assume we have a bipartite graph $G=\langle L\cup R, V\rangle$, 
+where $|L|=|R|=|V|=n$, meaning each node has exactly one connection. 
+
+How many different graphs are there that satisfy this condition? (Another way to think of it, given fixed $L$ and $R$ how many different sets $V$ are there such that $|V|=n$.)
+\vspace{5em}
+
+\clearpage
+%%%%%%%%%%%%%%%%
+\item Prove or disprove the following statement: 
+\begin{center}
+\textit{Given a tree $T=\langle V, E \rangle$, there must exist a root $r\in V$ which has at most two children. }
+\end{center}
+\vspace{7em}
+
+%%%%%%%%%%%%%%%%
+\item You're writing a method to find the pair of elements in an array of size $k$ 
+that have the highest product.
+How many products do you need to calculate 
+(in the naive implication that just computes all pair's products)?
+(Note, this answer should be an exact number, \textbf{not} in $O,\Theta,\Omega$ notation). 
+\vspace{5em}
+
+%%%%%%%%%%%%%%%%
+\item You're working in a team to construct an program for an assignment. 
+Your two colleagues made modules that you need to use and they reported the following to you: 
+\begin{itemize}
+\item Method A has a worst-case running time of $O(n)$
+\item Method B has a worst-case running time of $\Theta(\log n)$
+\end{itemize}
+You wrote a method that runs Method A $\frac{n}{2}$~times on inputs of size~$2\cdot n$, 
+then runs Method B 10~times on inputs of size $n$. 
+What can you conclude about the worst-case running time of your program as a whole? 
+\vspace{8em}
+
+%%%%%%%%%%%%%%%%
+\item Identify and describe the flaw in the following direct proof. 
+
+\textbf{False Claim:} 1=0
+
+\begin{proof}
+Let $x, y \in \ints^{\ge1}$ where $x=y$.
+\[
+\begin{aligned}
+x &= y & \text{by assumption}\\
+x^2 &= x\cdot y & \text{multiply both sides by $x$}\\
+x^2 – y^2 &= x\cdot y – y^2 & \text{subtract $y^2$ from both sides}\\ 
+\left(x-y\right)\left(x+y\right) &= y \left(x-y\right) & \text{algebra}\\
+x + y &= y & \text{divide both sides by $(x-y)$}\\
+2 y &= y & \text{because $x=y$}\\
+2 &= 1 & \text{divide by $y$, which is non-zero}\\
+1 &= 0 & \text{subtract 1 from both sides}\\
+\end{aligned}
+\]
+\end{proof}
+\vspace{5em}
+
+\end{enumerate}
+
+\end{document}
