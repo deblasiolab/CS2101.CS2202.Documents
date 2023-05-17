@@ -1,0 +1,327 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+\def\ck{\checkmark}
+%\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[table]{xcolor}
+\usepackage{parskip}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\begin{document}
+
+\title{CS 2101: Discrete Structures 1}
+\author{Instructor: Dan DeBlasio\\TA: Ivan Montoya-Sanchez\\IA: Alexis Rodriguez}
+\date{Spring 2023}
+\maketitle
+
+Sections~\ref{sec:overview} and~\ref{sec:assessment} contain general facts about the course and the students who took it. 
+Section~\ref{sec:analysis} contains my analysis and observations. This section goes on to include some recommendations, 
+\textbf{\color{red}including a full realignment of the course outcomes as a suggestion to the fundamentals committee}. 
+
+\section{Course Overview and Approach}
+\label{sec:overview}
+Detailed learning outcomes are shown in Table~\ref{tab:outcomes} and correspond to the labels in the later alignments. 
+This year we used ``Connecting Discrete Mathematics and Computer Science'' by David Liben-Newell from Cambridge University Press.
+The book was available both physically and electronically from the publisher, and a pre-print draft was available online from the authors website. 
+This book was used for both CS 2101 (Discrete Structures 1, or DS1 as referred to later) and CS 2202  (Discrete Structures 2, or DS2 as referred to later) with Chapters 2-4 discussed in Discrete Structures 1. 
+
+All documentation and resources for both DS1 and DS2 (including this report) are available for use in future semesters at \href{https://github.com/deblasiolab/CS2101.CS2202.Documents}{github.com/deblasiolab/CS2101.CS2202.Documents}.
+
+The course utilized of 4 major resources:
+\begin{itemize}
+
+\item \textbf{blackboard} --- used as the primary asycnchronous communication method with assignment information, announcements, and grades posted by the instructional team and assignments submitted by the students. 
+\item \textbf{online class ``team''} --- all students and staff were part of a university approved MS Team where students could ask questions or start discussions 24/7, 
+the instructor and other staff could monitor and intervene; this is also where online office hours are conducted. 
+\end{itemize}
+
+
+\begin{table}
+    \centering
+    \caption{Detailed Outcome Numbering Used}
+    {\small
+    \label{tab:outcomes}
+    \begin{tabularx}{\linewidth}{|l|X|}
+    \hline
+	\multicolumn{2}{|l|}{\textbf{Level 1: Knowledge and Comprehension }}\\
+	\textbf{DS1.1.a} & Counting and its relevance to computer science\\
+	\textbf{DS1.1.b} & Predicate logic: understanding what it is, being able to represent knowledge in 
+predicate logic, and write in English predicate logic expressions\\
+	\textbf{DS1.1.c} & Recurrence relations\\
+	\hline
+\multicolumn{2}{|l|}{\textbf{Level 2: Application and Analysis}}\\
+\textbf{DS1.2.a} & Basic logical reasoning for propositional logic \\
+\textbf{DS1.2.b} &Sets, functions, relations, and their relation to logic\\
+\hline
+\multicolumn{2}{|l|}{\textbf{Level 3: Synthesis and Evaluation }}\\
+\textbf{DS1.3.a} &Proofs: mechanics of proofs\\
+\textbf{DS1.3.b} &Propositional logic: propositions and operators, representation of knowledge in 
+propositional logic, evaluation of propositions, relation to conditional statements, 
+logical equivalence\\
+\textbf{DS1.3.c} &Induction: ability to lay out a proof by induction\\
+\hline \hline
+    \end{tabularx}
+    }
+\end{table}
+
+\section{Assessment Instruments}
+\label{sec:assessment}
+The three primary sources of assessment came from exams (1 mid-term exam, and a comprehensive final),
+chapter summary quizzes, 
+and 8 homework assignments (each one assigned over the course of one week). 
+Smaller contributors not included in this report were: in-class participation quizzes and participation. 
+These smaller assessments were not graded for correctness, 
+the participation quizzes are used in place of taking attendance. 
+
+\subsection{Exams and quizzes}
+All mid-term exams and chapter quizzes were graded by the instructor, feedback was given individually physically.
+The final exam was graded as a team, with all instructional team members present. 
+Additionally, a postmortem discussion was provided in class after each exam and quiz. 
+
+
+\paragraph{Delivery method} 
+Due to exam security issues in previous semesters several tactics were used to ensure assessment was taken of the individual student and no one else: 
+\begin{itemize}
+\item assessments were given in person, on paper, in the classroom
+\item some, but not all, assessments were shuffled in order
+\item assessments were not printed until the day of the exam, and each was printed with a unique identifying number
+\item assessments were close book 
+\end{itemize}
+
+In addition, to help ensure unbiased grading, the final exam was separated and graded with only the number available to the grader. 
+The front page of the assessments was the only place the student's name was present. 
+
+
+Scores from the exams and quizzes, and their alignment to the outcomes are listed in Table~\ref{tab:exams}.
+The scores are low compared to the C grade cutoff used, but the inclusion of all students (not just those who passes, see below) likely impacted these numbers. 
+
+
+
+
+\subsection{Homework}
+Homework assignments were taken from the texbook, though regenerated in order to allow for changes between the physical and pre-print versions. 
+Students were given one week to complete the assignment. 
+Since much of the homework required the use of mathematical notation, students were asked to submit a PDF (either scanned versions of paper or prepared digitally) in order to eliminated any errors cause in re-display of other formats (such as word). 
+The mapping of the homework to outcomes is shown in Table~\ref{tab:HW}. 
+The scores are low compared to the C grade cutoff used, but the inclusion of all students (not just those who passes, see below) likely impacted these numbers. 
+
+
+\begin{table}
+\caption{Concepts on Homework Assignments}
+\centering
+{\small
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+
+\begin{tabular}{lcc|cccccccc|}
+ & \multicolumn{1}{l}{} & \multicolumn{1}{l|}{} & HW 1 & HW 2 & HW 3 & HW4 & HW5 & HW6 & HW7 & HW8 \\ \hline
+\textbf{Level 3} & \multicolumn{1}{l}{\textbf{}} & \multicolumn{1}{l|}{\textbf{}} &  &  &  &  &  &  &  &  \\
+DS1.3.a & 3 &  \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006}47.6\%} &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} \\
+DS1.3.b & 2 &  \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006}53.9\%} &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  \\
+\cellcolor[HTML]{FFFF00}DS1.3.c & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 0} & -- &  &  &  &  &  &  &  &  \\ \hline
+\textbf{Level 2} & \multicolumn{1}{l}{\textbf{}} & \multicolumn{1}{l|}{\textbf{}} &  &  &  &  &  &  &  &  \\
+DS1.2.a & 2 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 53.4\%} &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  \\
+DS1.2.b & 5 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 51.1\%} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} \\ \hline
+\textbf{Level 1} & \multicolumn{1}{l}{\textbf{}} & \multicolumn{1}{l|}{\textbf{}} &  &  &  &  &  &  &  &  \\
+DS1.1.a & 1 & 60.7\% & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  \\
+DS1.1.b & 1 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 48.0\%} &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  \\
+\cellcolor[HTML]{FFFF00}DS1.1.c & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 0} & -- &  &  &  &  &  &  &  &  \\ \hline
+
+\end{tabular}
+}
+
+{\raggedright Notes:\\
+-- Objectives with scores lower than a C are marked in red.\\
+-- Objectives not covered marked in yellow. \\
+-- The inclusion of all students (not just those who passes, see below) likely impacted the concept scores. \par}
+\label{tab:HW}
+\end{table}
+
+
+\section{Analysis and Observations}
+\label{sec:analysis} 
+Initially 89 students registered for the course across two sections, 68 were enrolled at the time of the final exam. 
+Of these only 58 attended the final exam. 
+The final letter grades  assigned and scores needed for each letter are shown in Table~\ref{tab:letter}.\\
+\begin{table}
+\caption{Letter Grades Assigned}
+\label{tab:letter}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Letter & Cutoff & Count\\
+\hline\hline
+A	& $\ge88\%$ & 6\\
+\hline
+B	& $\ge75\% $& 12\\
+\hline
+C	& $\ge60\%$ & 17\\
+\hline
+D	& $\ge50\%$ & 8\\
+\hline
+F	&& 25\\
+\hline
+W 	&& 21\\
+\hline
+I	&& 0\\
+\hline
+\end{tabular}
+\end{center}%
+\end{table}
+
+
+The DF rate was 48.5\% (from the students who did not withdraw), and the DFW rate was 60.7\% (counting those who completed the welcome survey). 
+
+Typically I move the bars for letter grades based on the histogram of scores of students, in most situations a clear quad-modal distribution (or close to) appears as long as enough students are enrolled where separations can be made, this allows me to adjust to the difficulty of assessments in any given semester. 
+
+\subsection{Observations}
+\begin{enumerate}
+\item With this being a new textbook, and my first time administering the course, there were hiccups in policies and changes that could be made to make the continuity more smooth. 
+\item Very few students came to office hours (mine and the TAs), since these are mostly freshmen, there could be something done to incentivize attendance. 
+\item Many students stopped submitting assignments well before the drop deadline but did not drop the course, as a policy I do not drop students from the instructor side, but this likely impacted some of the statistics. 
+\item The chosen textbook is well written in my opinion and aligns well with the approach I wanted to take with the course, but it would have been more effective if students had read the text. 
+\end{enumerate}
+
+
+\subsection{Recommendations}
+\begin{enumerate}
+\item It would be useful to pace the course better with CS1. 
+It was mostly true that students were in both DS1 and CS1 at the same time, so playing off the topics covered worked well when it happened. 
+I did not have the chance to include the CS1 faculty in my timeline, this could have helped reinforce on both side. 
+One issue is that while most of the DS1 students are in CS1, some of the CS1 students are in Discrete \textit{Math} which will not align. 
+
+\item While it ended up being okay because of the withdraw rate, 
+one IA and one TA for what was originally 128 students (DS1 + DS2) was hard to manage. 
+The feedback on homework was by necessity spartan.
+If in CS2 for 50 students 1 TA and 2 IAs are assigned, this should be the standard per 50 students. 
+And while this can be adjusted some due to the SCH of these two courses a staff of 3 including the instructor is inadequate by far. 
+
+\item The outcomes as stated, in my opinion, do not align with the current 1 hour/2 hour split of DS1 and DS2. 
+There is also lots of ambiguity left.
+My approach was to find a text that aligned with what I felt was needed in CS2, then teach that. 
+This worked well for most concepts in DS1 (as a side note here, as we will mention some items need to be adjusted in DS2). 
+I also used the feedback from the DS1 students, and the points that needed reinforcement to adjust pacing. 
+The biggest misalignment, in my opinion, is the inclusion of Induction in Discrete 1 outcomes. 
+Students have trouble with simple proofs at this point and I felt it was better to reinforce that then introduce Induction at the end of the semester. 
+
+To that end, I have included suggested reorganization of the outcomes for Discrete Structures 1 in Appendix~\ref{app:newOutcomes}. 
+
+A mapping from old to new can be found in Appendix~\ref{app:oldOutcomeMapping}. 
+Note that in this proposal several current outcomes are moved to DS2, but as you will see in the corresponding report,  
+some items are moved backward from DS2 into DS1. 
+\end{enumerate}
+
+
+
+\begin{landscape}
+
+\begin{table}
+\begin{center}
+\caption{Concepts on Exams and Quizzes}
+\label{tab:final}
+{
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{tabular}{lcc|ccccccc|ccccc|cc|cccccccccc|}
+ & \multicolumn{1}{l}{} & \multicolumn{1}{l|}{} & \multicolumn{7}{c|}{Midterm} & \multicolumn{5}{c|}{Chapter 2 Quiz} & \multicolumn{2}{c|}{Chapter 3 Quiz} & \multicolumn{10}{c}{Final Exam} \\
+ & \multicolumn{1}{l}{} & \multicolumn{1}{l|}{} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 1 & 2 & 3 & 4 & 5 & 1-4 & 5-6 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+%\multicolumn{3}{r|}{Scores} & 47.7\% & 36.3\% & 65.4\% & 74.0\% & 69.9\% & 49.7\% & 80.4\% & 39.4\% & 39.4\% & 39.4\% & 39.4\% & 39.4\% & 60.8\% & 60.8\% & 43.9\% & 54.8\% & 74.5\% & 69.8\% & 60.6\% & 74.8\% & 46.5\% & 49.4\% & 57.0\% & 28.9\% \\
+ \hline
+\textbf{Level 3} & \multicolumn{1}{l}{\textbf{}} & \multicolumn{1}{l|}{\textbf{}} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+DS1.3.a & 5 &  \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006}52.1\%} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} \\
+DS1.3.b & 6 & 65.6\% &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 4} &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  \\
+\cellcolor[HTML]{FFFF00}DS1.3.c & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 0} & -- &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\ \hline
+\textbf{Level 2} & \multicolumn{1}{l}{\textbf{}} & \multicolumn{1}{l|}{\textbf{}} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+DS1.2.a & 5 & 61.6\% &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  \\
+DS1.2.b & 12 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 49.3\%} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  \\ \hline
+\textbf{Level 1} & \multicolumn{1}{l}{\textbf{}} & \multicolumn{1}{l|}{\textbf{}} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+DS1.1.a & 1 & 65.4\% &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+DS1.1.b & 5 &  \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006}58.4\%} &  &  &  &  &  &  &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 2} &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  \\
+\cellcolor[HTML]{FFFF00}DS1.1.c & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 0} & -- &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\ \hline
+\end{tabular}
+}\\
+{\raggedright Notes:\\
+-- No time was available for a chapter 4 quiz.\\
+-- Quiz scores not recorded at a question level, but most were over the same concepts.\\
+-- Objectives with scores lower than a C are marked in red.\\
+-- Objectives not covered marked in yellow. \par} 
+
+\label{tab:exams}
+
+\end{center}
+\end{table}
+
+
+\end{landscape}
+
+\begin{appendix}
+\section{Suggested Outcomes}
+\label{app:newOutcomes}
+\begin{enumerate}
+\item Level 1: Knowledge and Comprehension 
+	\begin{enumerate}
+	\item Relation of sets and functions to Computer Science
+	\end{enumerate}
+\item Level 2: Application and Analysis 
+\item Level 3: Synthesis and Evaluation 
+	\begin{enumerate}
+        \item	Mechanics of Proofs: identification and use of various proof paradigms including:
+               \begin{enumerate}
+                \item	Direct proof
+                \item	Proof by Contrapositive
+                \item	Proof by Contradiction
+                \item	Proof using cases
+                \item	Disproof by Counterexample
+        		\end{enumerate}
+        \item	Predicate logic: 
+                \begin{enumerate}
+                \item	understanding what it is, 
+                \item	be able to represent knowledge in predicate logic
+                \item	write in English predicate logic expressions 
+       		\end{enumerate}
+        \item	Propositional Logic including the topics of 
+                \begin{enumerate}
+                \item	propositions and operators,
+                \item	representation of English phrases in propositional logic
+                \item	evaluation of propositions
+                \item	relation to conditional statements 
+                \item	logical equivalence 
+        		\end{enumerate}
+        \item	Sets, functions, relations 
+	\end{enumerate}
+\end{enumerate}
+
+\clearpage
+\section{Mapping of Old Outcomes}
+\label{app:oldOutcomeMapping}
+\begin{enumerate}
+\item	Level 1: Knowledge and Comprehension 
+\begin{enumerate}
+\item	Counting and its relevance to computer science {\color{red}[new DS2:3:b]}
+\item	Predicate logic: understanding what it is, being able to represent knowledge in 
+predicate logic, and write in English predicate logic expressions {\color{red}[new DS1:3:b]}
+\item	Recurrence relations {\color{red}[new DS2:2:b:ii]}
+\end{enumerate}
+\item	Level 2: Application and Analysis 
+\begin{enumerate}
+\item	Basic logical reasoning for propositional logic {\color{red}[new DS1:3:c]}
+\item	Sets, functions, relations, and their relation to logic {\color{red}[new DS1:3:d and DS1:1:a]}
+\end{enumerate}
+\item	Level 3: Synthesis and Evaluation
+\begin{enumerate} 
+\item	Proofs: mechanics of proofs {\color{red}[new DS1:3:a]}
+\item	Propositional logic: propositions and operators, representation of knowledge in 
+propositional logic, evaluation of propositions, relation to conditional statements, 
+logical equivalence {\color{red}[new DS1:3:c]}
+\item	Induction: ability to lay out a proof by induction {\color{red}[new DS2:3:a]}
+\end{enumerate}
+\end{enumerate}
+
+\end{appendix}
+
+\end{document}

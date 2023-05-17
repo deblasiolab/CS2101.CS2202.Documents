@@ -1,0 +1,346 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+\def\ck{\checkmark}
+%\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[table]{xcolor}
+\usepackage{parskip}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\begin{document}
+
+\title{CS 2202: Discrete Structures 2}
+\author{Instructor: Dan DeBlasio\\TA: Ivan Montoya-Sanchez\\IA: Alexis Rodriguez}
+\date{Spring 2023}
+\maketitle
+
+Sections~\ref{sec:overview} and~\ref{sec:assessment} contain general facts about the course and the students who took it. 
+Section~\ref{sec:analysis} contains my analysis and observations. This section goes on to include some recommendations, 
+\textbf{\color{red}including a full realignment of the course outcomes as a suggestion to the fundamentals committee}. 
+
+\section{Course Overview and Approach}
+\label{sec:overview}
+Detailed learning outcomes are shown in Table~\ref{tab:outcomes} and correspond to the labels in the later alignments. 
+This year we used ``Connecting Discrete Mathematics and Computer Science'' by David Liben-Newell from Cambridge University Press.
+The book was available both physically and electronically from the publisher, and a pre-print draft was available online from the authors website. 
+This book was used for both CS 2101 (Discrete Structures 1, or DS1 as referred to later) and CS 2202  (Discrete Structures 2, or DS2 as referred to later) with Chapters 5-6,9, and 11 (not in that order) discussed in detail in Discrete Structures 2
+and Chapters 2-4 reviewed extensively the first weeks. 
+
+All documentation and resources for both DS1 and DS2 (including this report) are available for use in future semesters at \href{https://github.com/deblasiolab/CS2101.CS2202.Documents}{github.com/deblasiolab/CS2101.CS2202.Documents}.
+
+The course utilized of 4 major resources:
+\begin{itemize}
+
+\item \textbf{blackboard} --- used as the primary asycnchronous communication method with assignment information, announcements, and grades posted by the instructional team and assignments submitted by the students. 
+\item \textbf{online class ``team''} --- all students and staff were part of a university approved MS Team where students could ask questions or start discussions 24/7, 
+the instructor and other staff could monitor and intervene; this is also where online office hours are conducted. 
+\end{itemize}
+
+
+\begin{table}
+    \centering
+    \caption{Detailed Outcome Numbering Used}
+    {\small
+    \label{tab:outcomes}
+    \begin{tabularx}{\linewidth}{|l|X|}
+    
+\hline \multicolumn{2}{|l|}{\textbf{Level 1: Knowledge and Comprehension }}\\
+\textbf{DS2.1.a} & Multiple types of graphs and trees, and how they each are relevant to computer science.\\
+\hline \multicolumn{2}{|l|}{\textbf{Level 2: Application and Analysis }}\\
+\textbf{DS2.2.a} & Articulate what counting is and how relevant it is to computer science.\\
+\textbf{DS2.2.b} & Apply the basic principles of counting. \\
+\textbf{DS2.2.c} & Model combinatorial problems using graphs and trees. \\
+\textbf{DS2.2.d} & Describe various types of graphs and their common properties.\\
+\textbf{DS2.2.e} & Identify trees as a fundamental structure in modeling computer science problems.\\
+\hline \multicolumn{2}{|l|}{\textbf{Level 3: Synthesis and Evaluation }}\\
+\textbf{DS2.3.a} & Reason about the complexity of algorithms using counting techniques and properties of graphs\\
+\textbf{DS2.3.b} & Model computer science problems using graphs and trees\\
+\textbf{DS2.3.c} & Lay out a proof plan for existential and universal proofs, be able to identify shortcomings of some types of proving strategies \\
+\textbf{DS2.3.d} & Identify an inductive structure of a set: use it to conduct an inductive proof and to set a recurrence relation.\\
+
+\hline \hline
+    \end{tabularx}
+    }
+\end{table}
+
+\section{Assessment Instruments}
+\label{sec:assessment}
+The three primary sources of assessment came from exams (1 mid-term exam, and a comprehensive final),
+chapter summary quizzes, 
+and 8 homework assignments (each one assigned over the course of one week). 
+Smaller contributors not included in this report were: in-class participation quizzes and participation. 
+These smaller assessments were not graded for correctness, 
+the participation quizzes are used in place of taking attendance. 
+
+\subsection{Exams and quizzes}
+All mid-term exams and chapter quizzes were graded by the instructor, feedback was given individually physically.
+The final exam was graded as a team, with all instructional team members present. 
+Additionally, a postmortem discussion was provided in class after each exam and quiz. 
+
+
+\paragraph{Delivery method} 
+Due to exam security issues in previous semesters several tactics were used to ensure assessment was taken of the individual student and no one else: 
+\begin{itemize}
+\item assessments were given in person, on paper, in the classroom
+\item some, but not all, assessments were shuffled in order
+\item assessments were not printed until the day of the exam, and each was printed with a unique identifying number
+\item assessments were close book 
+\end{itemize}
+
+In addition, to help ensure unbiased grading, the final exam was separated and graded with only the number available to the grader. 
+The front page of the assessments was the only place the student's name was present. 
+
+
+Scores from the exams and quizzes, and their alignment to the outcomes are listed in Table~\ref{tab:exams}.
+Because significant material from DS1 was included in the administration of the course, these outcomes were assessed as well. 
+The scores are low compared to the C grade cutoff used, but the inclusion of all students (not just those who passes, see below) likely impacted these numbers. 
+
+
+
+
+\subsection{Homework}
+Homework assignments were taken from the texbook, though regenerated in order to allow for changes between the physical and pre-print versions. 
+Students were given one week to complete the assignment. 
+Since much of the homework required the use of mathematical notation, students were asked to submit a PDF (either scanned versions of paper or prepared digitally) in order to eliminated any errors cause in re-display of other formats (such as word). 
+The mapping of the homework to outcomes is shown in Table~\ref{tab:HW}. 
+Because significant material from DS1 was included in the administration of the course, these outcomes were assessed as well. 
+The scores are low compared to the C grade cutoff used, but the inclusion of all students (not just those who passes, see below) likely impacted these numbers. 
+
+
+\begin{table}
+\caption{Concepts on Homework Assignments}
+\centering
+{\small
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+
+\begin{tabular}{lcc|cccccccc|}
+ & \multicolumn{1}{l}{} & \multicolumn{1}{l|}{} & HW 1 & HW 2 & HW 3 & HW4 & HW5 & HW6 & HW7 & HW8 \\
+\textbf{Level 3} & \multicolumn{1}{l}{} & \multicolumn{1}{l|}{} & 70.1\% & 61.1\% & 75.2\% & 79.4\% & 73.1\% & 69.9\% & 51.0\% & 70.7\% \\ \hline \hline
+DS2.3.a & 1 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 70.7\%} &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} \\
+DS2.3.b & 2 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 60.5\%} &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  \\
+DS2.3.c & 2 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 56.0\%} &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  \\
+DS2.3.d & 1 & 75.2\% &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  \\ \hline
+\textbf{Level 2} & \multicolumn{1}{l}{\textbf{}} & \multicolumn{1}{l|}{\textbf{}} &  &  &  &  &  &  &  &  \\
+DS2.2.a & 1 & 73.1\% &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  \\
+DS2.2.b & 2 & 76.2\% &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  \\
+DS2.2.c & 2 & 65.2\% &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  \\
+DS2.2.d & 2 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 60.5\%} &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  \\
+DS2.2.e & 2 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 60.5\%} &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  \\ \hline
+\textbf{Level 1} & \multicolumn{1}{l}{\textbf{}} & \multicolumn{1}{l|}{\textbf{}} &  &  &  &  &  &  &  &  \\
+DS2.1.a & 2 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 60.5\%} &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  \\ \hline \hline
+\textbf{Level 3} & \multicolumn{1}{l}{\textbf{}} & \multicolumn{1}{l|}{\textbf{}} &  &  &  &  &  &  &  &  \\
+DS1.3.a & \textbf{1} & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} \textbf{61.1\%}} &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  \\
+DS1.3.b & 1 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 61.1\%} &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  \\
+DS1.3.c & 2 & 77.3\% &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  \\ \hline
+\textbf{Level 2} & \multicolumn{1}{l}{\textbf{}} & \multicolumn{1}{l|}{\textbf{}} &  &  &  &  &  &  &  &  \\
+DS1.2.a & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} \textbf{0}} & \textbf{--} &  &  &  &  &  &  &  &  \\
+DS1.2.b & 1 & 70.1\% & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  \\ \hline
+\textbf{Level 1} & \multicolumn{1}{l}{\textbf{}} & \multicolumn{1}{l|}{\textbf{}} &  &  &  &  &  &  &  &  \\
+DS1.1.a & \textbf{2} & \textbf{76.2\%} &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  \\
+DS1.1.b & 1 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 61.1\%} &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  \\
+DS1.1.c & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 0} & -- &  &  &  &  &  &  &  & \\\hline
+\end{tabular}
+}
+
+{\raggedright Notes:\\
+-- Objectives with scores lower than a C are marked in red.\\
+-- The inclusion of all students (not just those who passes, see below) likely impacted the concept scores. \par}
+\label{tab:HW}
+\end{table}
+
+
+\section{Analysis and Observations}
+\label{sec:analysis}
+Initially 39 students registered for the course across two sections, 32 were enrolled at the time of the final exam. 
+Of these only 27 attended the final exam. 
+The final letter grades  assigned and scores needed for each letter are shown in Table~\ref{tab:letter}.\\
+\begin{table}
+\caption{Letter Grades Assigned}
+\label{tab:letter}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Letter & Cutoff & Count\\
+\hline\hline
+A	& $\ge90\%$ & 3\\
+\hline
+B	& $\ge75\% $& 12\\
+\hline
+C	& $\ge65\%$ & 8\\
+\hline
+D	& $\ge50\%$ & 1\\
+\hline
+F	&& 8\\
+\hline
+W 	&& 7\\
+\hline
+I	&& 0\\
+\hline
+\end{tabular}
+\end{center}%
+\end{table}
+
+
+The DF rate was 28.1\% (from the students who did not withdraw), and the DFW rate was 41.0\% (counting those who completed the welcome survey). 
+
+Typically I move the bars for letter grades based on the histogram of scores of students, in most situations a clear quad-modal distribution (or close to) appears as long as enough students are enrolled where separations can be made, this allows me to adjust to the difficulty of assessments in any given semester. 
+
+\subsection{Observations}
+\begin{enumerate}
+\item With this being a new textbook, and my first time administering the course, there were hiccups in policies and changes that could be made to make the continuity more smooth. 
+\item The chosen textbook is well written in my opinion and aligns well with the approach I wanted to take with the course, but it would have been more effective if students had read the text. 
+\end{enumerate}
+
+
+\subsection{Recommendations}
+\begin{enumerate}
+\item It would be useful to pace the course better with CS2. 
+It was mostly true that students were in both DS2 and CS2 at the same time, so playing off the topics covered worked well when it happened. 
+This was easier than with CS1 since I had taught CS2 several times before, this may be harder to accomplish for someone new and thus its even more important to include the CS2 faculty in the timeline, 
+as this could have helped reinforce on both side. 
+One issue is that while most of the DS2 students are in CS2, some of the CS2 students are in Discrete \textit{Math} which will not align. 
+
+\item While it ended up being okay because of the withdraw rate, 
+one IA and one TA for what was originally 128 students (DS1 + DS2) was hard to manage. 
+The feedback on homework was by necessity spartan.
+If in CS2 for 50 students 1 TA and 2 IAs are assigned, this should be the standard per 50 students. 
+And while this can be adjusted some due to the SCH of these two courses a staff of 3 including the instructor is inadequate by far. 
+
+\item The outcomes as stated, in my opinion, do not align with the current 1 hour/2 hour split of DS1 and DS2. 
+There is also lots of ambiguity left.
+My approach was to find a text that aligned with what I felt was needed in CS2, then teach that. 
+This worked well for most concepts in DS1 (as a side note here, as we will mention some items need to be adjusted in DS2). 
+I also used the feedback from the DS1 students, and the points that needed reinforcement to adjust pacing. 
+The biggest misalignment, in my opinion, is the inclusion of Induction in Discrete 1 outcomes. 
+Students have trouble with simple proofs at this point and I felt it was better to reinforce that then introduce Induction at the end of the semester. 
+
+To that end, I have included suggested reorganization of the outcomes for Discrete Structures 2 in Appendix~\ref{app:newOutcomes}. 
+
+A mapping from old to new can be found in Appendix~\ref{app:oldOutcomeMapping}. 
+Note that in this proposal several current outcomes are moved to DS1, but as you will see in the corresponding report,  
+some items are moved forward from DS1 into DS2. 
+\end{enumerate}
+
+
+
+\begin{landscape}
+
+\begin{table}
+\begin{center}
+\caption{Concepts on Exams and Quizzes}
+\label{tab:final}
+{\small
+\begin{tabular}{lcc|ccccccc|ccc|ccccc|ccccc|ccccccccccc|}
+ & \multicolumn{1}{l}{} & \multicolumn{1}{l|}{} & \multicolumn{7}{c|}{Midterm} & \multicolumn{3}{c|}{Chapter 5 Quiz} & \multicolumn{5}{c|}{Chapter 9 Quiz} & \multicolumn{5}{c|}{Chapter 11 Quiz} & \multicolumn{11}{c|}{Final Exam} \\ 
+ & \multicolumn{1}{l}{} & \multicolumn{1}{l|}{} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 1 & 2 & 3 & 1 & 2 & 3 & 4 & 5 & 1 & 2 & 3 & 4 & 5 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 \\
+%\textbf{Level 3} & \multicolumn{1}{l}{\textbf{}} & \multicolumn{1}{l|}{\textbf{}} & 41.7\% & 59.3\% & 72.9\% & 53.4\% & 60.9\% & 82.9\% & 41.0\% & 38.1\% & 38.1\% & 38.1\% & 79.0\% & 79.0\% & 79.0\% & 79.0\% & 79.0\% & 47.3\% & 47.3\% & 47.3\% & 47.3\% & 47.3\% & 26.5\% & 42.7\% & 56.9\% & 56.7\% & 56.0\% & 66.7\% & 43.0\% & 70.2\% & 59.1\% & 38.9\% & 50.1\% \\ \hline
+\hline\hline
+\textbf{Level 3} &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&\\
+DS2.3.a & 2 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 49.0\%} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  \\
+DS2.3.b & 1 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 47.3\%} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  &  &  &  &  &  \\
+DS2.3.c & 3 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 56.7\%} &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} \\
+DS2.3.d & 4 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 60.8\%} &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  &  \\ \hline
+\textbf{Level 2} & \multicolumn{1}{l}{\textbf{}} & \multicolumn{1}{l|}{\textbf{}} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+DS2.2.a & 1 & 79.0\% &  &  &  &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+DS2.2.b & 9 & 69.3\% &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  \\
+DS2.2.c & 2 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 55.5\%} &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+DS2.2.d & 5 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 46.4\%} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  \\
+DS2.2.e & 3 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 58.1\%} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  \\ \hline
+\textbf{Level 1} & \multicolumn{1}{l}{\textbf{}} & \multicolumn{1}{l|}{\textbf{}} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+DS2.1.a & 7 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 49.9\%} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  \\ \hline
+\textbf{Level 3} & \multicolumn{1}{l}{\textbf{}} & \multicolumn{1}{l|}{\textbf{}} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+DS1.3.a & 3 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 44.6\%} &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} \\
+DS1.3.b & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 0} & -- &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+DS1.3.c & 6 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 60.6\%} &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  &  \\ \hline
+\textbf{Level 2} & \multicolumn{1}{l}{\textbf{}} & \multicolumn{1}{l|}{\textbf{}} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+DS1.2.a & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 0} & -- &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+DS1.2.b & 4 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 51.6\%} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  &  &  &  \\ \hline
+\textbf{Level 1} & \multicolumn{1}{l}{\textbf{}} & \multicolumn{1}{l|}{\textbf{}} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+DS1.1.a & 8 & 70.6\% &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  \\
+DS1.1.b & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 0} & -- &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+DS1.1.c & 1 & \cellcolor[HTML]{FFC7CE}{\color[HTML]{9C0006} 56.9\%} &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  & \cellcolor[HTML]{C6EFCE}{\color[HTML]{006100} 1} &  &  &  &  &  &  &  & \\
+\hline
+\end{tabular}
+}\\
+{\raggedright Notes:\\
+-- No time was available for a chapter 6 quiz.\\
+-- Quiz scores not recorded at a question level, but most were over the same concepts.\\
+-- Objectives with scores lower than a C are marked in red.\par} 
+
+\label{tab:exams}
+
+\end{center}
+\end{table}
+
+
+\end{landscape}
+
+\begin{appendix}
+\section{Suggested Outcomes}
+\label{app:newOutcomes}
+\begin{enumerate}
+\item Level 1: Knowledge and Comprehension 
+	\begin{enumerate}
+	\item	Intuition complexity classes in general
+	\item Major running time of open problems in Computer Science and their relevance in relation to other topics in the class (i.e. Traveling Salesman when discussing graphs, SAT when studying propositional logic, etc.) 
+	\end{enumerate}
+\item Level 2: Application and Analysis 
+	\begin{enumerate}
+	\item Identify and Know Relevant Properties of:
+		\begin{enumerate}
+		\item Graphs (weighted and unweighted, directed and undirected)
+		\item Trees (weighted and unweighted)
+		\item Binary Trees
+		\end{enumerate}
+	\item Reason about the complexity of algorithms using
+		\begin{enumerate}
+		\item Simple analysis of non-complex methods
+		\item Counting for algorithms with loops
+		\item Recurrence Relations for algorithms with recursion
+		\end{enumerate}
+	\end{enumerate}
+\item Level 3: Synthesis and Evaluation 
+	\begin{enumerate}
+	\item Proof by Induction: proving statements and algorithms using
+		\begin{enumerate}
+		\item “weak” induction
+		\item strong induction
+		\item structural induction (primarily on graph and trees)
+		\end{enumerate}
+	\item Counting and its relevance to computer science 
+	\end{enumerate}
+\end{enumerate}
+
+\clearpage
+\section{Mapping of Old Outcomes}
+\label{app:oldOutcomeMapping}
+\begin{enumerate}
+\item Level 1: Knowledge and Comprehension 
+	\begin{enumerate}
+	\item Multiple types of graphs and trees, and how they each are relevant to computer science. {\color{red}[new DS2:2:a]}
+	\end{enumerate}
+\item Level 2: Application and Analysis 
+	\begin{enumerate}
+	\item Articulate what counting is and how relevant it is to computer science. {\color{red}[new DS2:3:b and DS2:2:b:ii]}
+	\item Apply the basic principles of counting. {\color{red}[new DS2:2:b:ii]}
+	\item Model combinatorial problems using graphs and trees. {\color{red}[eliminated/new DS2:1:b]}
+	\item Describe various types of graphs and their common properties. {\color{red}[new DS2:2:a]}
+	\item Identify trees as a fundamental structure in modeling computer science problems. {\color{red}[eliminated/new DS2:2:a or DS2:1:b]}
+	\end{enumerate}
+\item Level 3: Synthesis and Evaluation 
+	\begin{enumerate}
+	\item Reason about the complexity of algorithms using counting techniques and properties of graphs {\color{red}[new DS2:2:b]}
+	\item Model computer science problems using graphs and trees {\color{red}[new DS2:2:a and DS2:1:b]}
+	\item Lay out a proof plan for existential and universal proofs, be able to identify shortcomings of some types of proving strategies {\color{red}[new DS1:2:a]}
+	\item Identify an inductive structure of a set: use it to conduct an inductive proof and to set a recurrence relation. {\color{red}[new DS2:3:a:iii]}
+	\end{enumerate}
+\end{enumerate}
+
+\end{appendix}
+
+\end{document}
